@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7325B14164411EBEE2CC16DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4067877049824A01460301A8 /* GoogleService-Info.plist */; };
+		B0001 /* TalkDailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001 /* TalkDailyApp.swift */; };
+		B0002 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002 /* AppViewModel.swift */; };
+		B0003 /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F003 /* DomainModels.swift */; };
+		B0004 /* ScenarioCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004 /* ScenarioCatalog.swift */; };
+		B0005 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F005 /* UserRepository.swift */; };
+		B0006 /* FutureServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006 /* FutureServices.swift */; };
+		B0007 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007 /* AppTheme.swift */; };
+		B0008 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008 /* OnboardingView.swift */; };
+		B0009 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F009 /* HomeView.swift */; };
+		B0010 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010 /* SpeechService.swift */; };
+		B0011 /* PracticeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011 /* PracticeViews.swift */; };
+		B0012 /* ProgressFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012 /* ProgressFeatureView.swift */; };
+		B0013 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F013 /* SettingsView.swift */; };
+		B0014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F014 /* Assets.xcassets */; };
+		B0015 /* TalkDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015 /* TalkDailyTests.swift */; };
+		B0016 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F016 /* XCTest.framework */; };
+		B2B07FD330422B8D0086F3BB /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = B2B07FD230422B8D0086F3BB /* FirebaseAppCheck */; };
+		B2B07FD530422B8D0086F3BB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B2B07FD430422B8D0086F3BB /* FirebaseAuth */; };
+		B2B07FD730422B8D0086F3BB /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B2B07FD630422B8D0086F3BB /* FirebaseCore */; };
+		B2B07FD930422B8D0086F3BB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = B2B07FD830422B8D0086F3BB /* FirebaseFunctions */; };
+		EC2AC99A9DCEBC5E3F8FF9EC /* PracticeSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A854313E304DC7E69CCF985E /* PracticeSessionViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		PX001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PRJ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T001;
+			remoteInfo = TalkDaily;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4067877049824A01460301A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A854313E304DC7E69CCF985E /* PracticeSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PracticeSessionViewModel.swift; path = Features/Practice/PracticeSessionViewModel.swift; sourceTree = "<group>"; };
+		F001 /* TalkDailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDailyApp.swift; sourceTree = "<group>"; };
+		F002 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		F003 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/DomainModels.swift; sourceTree = "<group>"; };
+		F004 /* ScenarioCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ScenarioCatalog.swift; sourceTree = "<group>"; };
+		F005 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence/UserRepository.swift; sourceTree = "<group>"; };
+		F006 /* FutureServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/FutureServices.swift; sourceTree = "<group>"; };
+		F007 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/AppTheme.swift; sourceTree = "<group>"; };
+		F008 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding/OnboardingView.swift; sourceTree = "<group>"; };
+		F009 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home/HomeView.swift; sourceTree = "<group>"; };
+		F010 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice/SpeechService.swift; sourceTree = "<group>"; };
+		F011 /* PracticeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice/PracticeViews.swift; sourceTree = "<group>"; };
+		F012 /* ProgressFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress/ProgressFeatureView.swift; sourceTree = "<group>"; };
+		F013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
+		F014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F015 /* TalkDailyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDaily/Tests/TalkDailyTests.swift; sourceTree = SOURCE_ROOT; };
+		F016 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		F017 /* TalkDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = TalkDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F018 /* TalkDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TalkDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		P002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B07FD330422B8D0086F3BB /* FirebaseAppCheck in Frameworks */,
+				B2B07FD730422B8D0086F3BB /* FirebaseCore in Frameworks */,
+				B2B07FD530422B8D0086F3BB /* FirebaseAuth in Frameworks */,
+				B2B07FD930422B8D0086F3BB /* FirebaseFunctions in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0016 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G001 = {
+			isa = PBXGroup;
+			children = (
+				G002 /* TalkDaily */,
+				G003 /* Tests */,
+				G004 /* Products */,
+				G005 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		G002 /* TalkDaily */ = {
+			isa = PBXGroup;
+			children = (
+				G006 /* App */,
+				G007 /* Core */,
+				G008 /* Features */,
+				G009 /* Assets */,
+				4067877049824A01460301A8 /* GoogleService-Info.plist */,
+				A854313E304DC7E69CCF985E /* PracticeSessionViewModel.swift */,
+			);
+			path = TalkDaily;
+			sourceTree = "<group>";
+		};
+		G003 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F015 /* TalkDailyTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		G004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F017 /* TalkDaily.app */,
+				F018 /* TalkDailyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F016 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G006 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F001 /* TalkDailyApp.swift */,
+				F002 /* AppViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G007 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F003 /* DomainModels.swift */,
+				F004 /* ScenarioCatalog.swift */,
+				F005 /* UserRepository.swift */,
+				F006 /* FutureServices.swift */,
+				F007 /* AppTheme.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		G008 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F008 /* OnboardingView.swift */,
+				F009 /* HomeView.swift */,
+				F010 /* SpeechService.swift */,
+				F011 /* PracticeViews.swift */,
+				F012 /* ProgressFeatureView.swift */,
+				F013 /* SettingsView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		G009 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F014 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T001 /* TalkDaily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C003 /* Build configuration list for PBXNativeTarget "TalkDaily" */;
+			buildPhases = (
+				P001 /* Sources */,
+				P002 /* Frameworks */,
+				P003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalkDaily;
+			packageProductDependencies = (
+				B2B07FD230422B8D0086F3BB /* FirebaseAppCheck */,
+				B2B07FD430422B8D0086F3BB /* FirebaseAuth */,
+				B2B07FD630422B8D0086F3BB /* FirebaseCore */,
+				B2B07FD830422B8D0086F3BB /* FirebaseFunctions */,
+			);
+			productName = TalkDaily;
+			productReference = F017 /* TalkDaily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T002 /* TalkDailyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C004 /* Build configuration list for PBXNativeTarget "TalkDailyTests" */;
+			buildPhases = (
+				P004 /* Sources */,
+				P005 /* Frameworks */,
+				P006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D001 /* PBXTargetDependency */,
+			);
+			name = TalkDailyTests;
+			productName = TalkDailyTests;
+			productReference = F018 /* TalkDailyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PRJ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					T001 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					T002 = {
+						CreatedOnToolsVersion = 26.4;
+						TestTargetID = T001;
+					};
+				};
+			};
+			buildConfigurationList = C001 /* Build configuration list for PBXProject "TalkDaily" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G001;
+			packageReferences = (
+				B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = G004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T001 /* TalkDaily */,
+				T002 /* TalkDailyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		P003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0014 /* Assets.xcassets in Resources */,
+				7325B14164411EBEE2CC16DC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		P001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0001 /* TalkDailyApp.swift in Sources */,
+				B0002 /* AppViewModel.swift in Sources */,
+				B0003 /* DomainModels.swift in Sources */,
+				B0004 /* ScenarioCatalog.swift in Sources */,
+				B0005 /* UserRepository.swift in Sources */,
+				B0006 /* FutureServices.swift in Sources */,
+				B0007 /* AppTheme.swift in Sources */,
+				B0008 /* OnboardingView.swift in Sources */,
+				B0009 /* HomeView.swift in Sources */,
+				B0010 /* SpeechService.swift in Sources */,
+				B0011 /* PracticeViews.swift in Sources */,
+				B0012 /* ProgressFeatureView.swift in Sources */,
+				B0013 /* SettingsView.swift in Sources */,
+				EC2AC99A9DCEBC5E3F8FF9EC /* PracticeSessionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0015 /* TalkDailyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T001 /* TalkDaily */;
+			targetProxy = PX001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TalkDaily/TalkDaily.Debug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VXUZJ34N38;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Phravora;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Phravora needs your microphone for professional English speaking practice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Phravora transcribes your practice so it can show what you said.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phravora.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TalkDaily/TalkDaily.Release.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = VXUZJ34N38;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Phravora;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Phravora needs your microphone for professional English speaking practice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Phravora transcribes your practice so it can show what you said.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phravora.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TalkDailyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkDaily.app/TalkDaily";
+			};
+			name = Debug;
+		};
+		C302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TalkDailyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkDaily.app/TalkDaily";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C001 /* Build configuration list for PBXProject "TalkDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C101 /* Debug */,
+				C102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C003 /* Build configuration list for PBXNativeTarget "TalkDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201 /* Debug */,
+				C202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C004 /* Build configuration list for PBXNativeTarget "TalkDailyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C301 /* Debug */,
+				C302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2B07FD230422B8D0086F3BB /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		B2B07FD430422B8D0086F3BB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B2B07FD630422B8D0086F3BB /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		B2B07FD830422B8D0086F3BB /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B07FD130422B8D0086F3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = PRJ /* Project object */;
+}
