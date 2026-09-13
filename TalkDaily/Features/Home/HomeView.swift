@@ -27,8 +27,15 @@ struct HomeView: View {
 
                         HStack(alignment: .top) {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Career speaking").font(.largeTitle.bold())
-                                Text("Practise before the moment matters.").foregroundStyle(.secondary)
+                                Text("Career speaking")
+                                    .font(.title.bold())
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.85)
+                                Text("Practise before the moment matters.")
+                                    .font(.subheadline)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.85)
+                                    .foregroundStyle(.secondary)
                             }
                             Spacer()
                             Label("\(app.data.progress.currentStreak)", systemImage: "flame.fill")
@@ -83,42 +90,45 @@ struct DailyMissionCard: View {
         NavigationLink {
             PracticeSessionView(mission: mission)
         } label: {
-            ZStack(alignment: .bottomLeading) {
-                MissionVisualScene(mission: mission, presentation: .hero)
-                    .accessibilityHidden(true)
+            GeometryReader { proxy in
+                ZStack(alignment: .bottomLeading) {
+                    MissionVisualScene(mission: mission, presentation: .hero)
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .accessibilityHidden(true)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Text(mission.difficulty.title.uppercased())
-                            .font(.caption.weight(.bold))
-                            .lineLimit(1)
-                        Spacer(minLength: 8)
-                        Label("\(mission.estimatedMinutes) min", systemImage: "clock")
-                            .font(.caption.weight(.semibold))
-                            .lineLimit(1)
-                            .fixedSize()
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text(mission.difficulty.title.uppercased())
+                                .font(.caption.weight(.bold))
+                                .lineLimit(1)
+                            Spacer(minLength: 8)
+                            Label("\(mission.estimatedMinutes) min", systemImage: "clock")
+                                .font(.caption.weight(.semibold))
+                                .lineLimit(1)
+                                .fixedSize()
+                        }
+                        Text(mission.title)
+                            .font(.title2.bold())
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text(mission.objective)
+                            .font(.subheadline)
+                            .lineLimit(3)
+                            .fixedSize(horizontal: false, vertical: true)
+                        HStack {
+                            Text("Start mission").fontWeight(.bold)
+                            Spacer(minLength: 8)
+                            Image(systemName: "arrow.right")
+                        }
                     }
-                    Text(mission.title)
-                        .font(.title2.bold())
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(mission.objective)
-                        .font(.subheadline)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                    HStack {
-                        Text("Start mission").fontWeight(.bold)
-                        Spacer(minLength: 8)
-                        Image(systemName: "arrow.right")
-                    }
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.35), radius: 3, y: 1)
+                    .padding(20)
+                    .frame(width: proxy.size.width, alignment: .leading)
                 }
-                .foregroundStyle(.white)
-                .shadow(color: .black.opacity(0.35), radius: 3, y: 1)
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .frame(height: 286)
+            .frame(height: 260)
             .clipped()
         }
         .buttonStyle(.plain)
@@ -133,40 +143,43 @@ struct MissionRow: View {
         NavigationLink {
             PracticeSessionView(mission: mission)
         } label: {
-            ZStack(alignment: .bottomLeading) {
-                MissionVisualScene(mission: mission, presentation: .card)
-                    .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(mission.title)
-                        .fontWeight(.semibold)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .multilineTextAlignment(.leading)
-                    Text(mission.situation)
-                        .font(.caption)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .multilineTextAlignment(.leading)
-                }
-                .foregroundStyle(.white)
-                .shadow(color: .black.opacity(0.5), radius: 3, y: 1)
-                .padding(16)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-                VStack {
-                    HStack {
-                        Spacer()
-                        Label("\(mission.estimatedMinutes)m", systemImage: "clock")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.white)
-                            .padding(8)
-                            .background(.black.opacity(0.32), in: Capsule())
-                            .fixedSize()
+            GeometryReader { proxy in
+                ZStack(alignment: .bottomLeading) {
+                    MissionVisualScene(mission: mission, presentation: .card)
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(mission.title)
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
+                        Text(mission.situation)
+                            .font(.caption)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
                     }
-                    Spacer()
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.5), radius: 3, y: 1)
+                    .padding(16)
+                    .frame(width: proxy.size.width, alignment: .leading)
+
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Label("\(mission.estimatedMinutes)m", systemImage: "clock")
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(.white)
+                                .padding(8)
+                                .background(.black.opacity(0.32), in: Capsule())
+                                .fixedSize()
+                        }
+                        Spacer()
+                    }
+                    .padding(12)
+                    .frame(width: proxy.size.width, height: proxy.size.height, alignment: .top)
                 }
-                .padding(12)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .frame(height: 146)
@@ -219,7 +232,7 @@ struct MissionVisualScene: View {
             // Keep the top of the frame visible. In people-focused photos this
             // preserves faces instead of centering the crop on the torso.
             .frame(
-                height: presentation == .hero ? 286 : presentation == .preview ? 132 : 146,
+                height: presentation == .hero ? 260 : presentation == .preview ? 132 : 146,
                 alignment: .top
             )
             .clipped()

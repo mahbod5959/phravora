@@ -48,7 +48,7 @@ struct SettingsView: View {
                 Section {
                     Toggle("Daily practice reminder", isOn: reminderBinding)
                     if reminderPermissionDenied {
-                        Label("Notifications are turned off for TalkDaily. Enable them in Settings to get a daily reminder.", systemImage: "bell.slash")
+                        Label("Notifications are turned off for Phravora. Enable them in Settings to get a daily reminder.", systemImage: "bell.slash")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }

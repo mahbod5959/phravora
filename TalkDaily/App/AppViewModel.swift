@@ -15,7 +15,7 @@ final class AppViewModel: ObservableObject {
         state = .loading
         do { data = try await repository.load(); state = data.hasCompletedOnboarding ? .ready : .onboarding }
         catch let error as AppError { state = .failed(error) }
-        catch { state = .failed(.unknown("TalkDaily could not start. Please try again.")) }
+        catch { state = .failed(.unknown("Phravora could not start. Please try again.")) }
     }
 
     func completeOnboarding(level: EnglishLevel, profession: Profession, careerGoal: CareerGoal, difficultSituations: Set<DifficultSituation>, dailyTarget: DailyPracticeTarget) async {
