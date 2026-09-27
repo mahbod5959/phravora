@@ -10,6 +10,10 @@ presentations, client calls, and networking — through short, structured
 "missions." It is not positioned as a general AI tutor or open-ended chat
 product.
 
+## Screenshots
+<!-- screenshots to be added -->
+
+
 ## Repository layout
 
 - `TalkDaily/` — the iOS app (SwiftUI). Open `TalkDaily.xcodeproj` in Xcode.
